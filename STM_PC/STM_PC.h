@@ -8,4 +8,7 @@ typedef struct {
 	uint8_t payload_len;
 	uint8_t[256] payload;
 } STM_Packet;
+
+STM_Packet deserialiseSTM_Packet(uint8_t[] buff);
+uint8_t[] serialiseSTM_Packet(STM_Packet* packet);
 #endif
