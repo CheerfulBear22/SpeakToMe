@@ -3,6 +3,12 @@
 #include <unistd.h>
 #include <stdint.h>
 
+/*
+To Do:
+- Error handling
+- Memory security
+*/
+
 STM_Packet deserialiseSTMPacket(uint8_t[] buff) {
 	STM_Packet packet = {0};
 
