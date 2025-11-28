@@ -17,7 +17,8 @@ STM_Packet* deserialiseSTMPacket(uint8_t* buff) {
 	packet.payload_len = buff[1];
 	memcpy(packet.payload, &buff[3], packet.payload_len);
 	
-	return &packet;
+	STM_Packet* pktptr = &packet;
+	return pktptr;
 }
 
 uint8_t* serialiseSTM_Packet(STM_Packet* packet) {
@@ -27,7 +28,8 @@ uint8_t* serialiseSTM_Packet(STM_Packet* packet) {
 	buff[1] = packet->payload_len;
 	memcpy(&buff[3], packet->payload, packet->payload_len);
 
-	return buff;
+	uint8_t* buffptr = buff;
+	return buffptr;
 }
 
 int sendSTMMessage(int fd, uint8_t* buff) {
